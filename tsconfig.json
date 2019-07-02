@@ -1,22 +1,22 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx": "react",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
     "sourceMap": true,
     "strict": true,
-    "baseUrl": ".",
     "typeRoots": [
       "./node_modules/@types/",
       "**/types/**/*.d.ts"
     ],
-    "noErrorTruncation": true,
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    },
+    "allowSyntheticDefaultImports": true, 
     "lib": [
       "dom",
       "es2015",
@@ -24,6 +24,7 @@
       "es2017.object"
     ]
   },
+  "include": ["src/**/*"],
   "exclude": [
     "**/node_modules",
     "**/__tests__"
